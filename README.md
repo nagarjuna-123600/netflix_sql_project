@@ -8,7 +8,8 @@ This README outlines the project goals, problem statements, analytical approach,
 2. Identify the **most common ratings** for both content types.  
 3. Examine **release trends** by year, country, and duration.  
 4. Explore and **categorize content** using specific keywords and genres.
-
+## Dataset
+the data for this project is sourced from kaggle dataset
 
 
 
