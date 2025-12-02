@@ -93,10 +93,7 @@ SELECT *FROM (SELECT *,UNNEST(STRING_TO_ARRAY(director, ',')) AS director_name F
 ### 8. List All TV Shows with More Than 5 Seasons
 
 ```sql
-SELECT *
-FROM netflix
-WHERE type = 'TV Show'
-  AND SPLIT_PART(duration, ' ', 1)::INT > 5;
+SELECT *FROM netflix WHERE type = 'TV Show' AND SPLIT_PART(duration, ' ', 1)::INT > 5;
 ```
 
 **Objective:** Identify TV shows with more than 5 seasons.
@@ -104,11 +101,7 @@ WHERE type = 'TV Show'
 ### 9. Count the Number of Content Items in Each Genre
 
 ```sql
-SELECT 
-    UNNEST(STRING_TO_ARRAY(listed_in, ',')) AS genre,
-    COUNT(*) AS total_content
-FROM netflix
-GROUP BY 1;
+SELECT UNNEST(STRING_TO_ARRAY(listed_in, ',')) AS genre,COUNT(*) AS total_content FROM netflix GROUP BY 1;
 ```
 
 **Objective:** Count the number of content items in each genre.
