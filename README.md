@@ -11,22 +11,9 @@ This README outlines the project goals, problem statements, analytical approach,
 ## Dataset
 The data for this project is sourced from kaggle dataset
 ## Dataset link [Netflix Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows)
-## Shema
-1. DROP TABLE IF EXISTS netflix;
-2. CREATE TABLE netflix
-3.(
-4  show_id      VARCHAR(5),
-5  type         VARCHAR(10),
-6  title        VARCHAR(250),
-7  director     VARCHAR(550),
-8  casts        VARCHAR(1050),
-10 country      VARCHAR(550),
-11 date_added   VARCHAR(55),
-12 release_year INT,
-13 rating       VARCHAR(15),
-14 duration     VARCHAR(15),
-15 listed_in    VARCHAR(250),
-16 description  VARCHAR(550)
-17 );
+## schema
+## 🗄️ SQL Table Script
+The SQL schema for creating the Netflix dataset table can be found here:  
+[View netflix_table.sql](https://github.com/your-username/your-repo-name/blob/main/netflix_table.sql)
 
 
