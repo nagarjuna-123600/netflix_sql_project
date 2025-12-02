@@ -71,9 +71,7 @@ SELECT * FROM( SELECT UNNEST(STRING_TO_ARRAY(country, ',')) AS country,COUNT(*) 
 ```sql
 SELECT 
     *
-FROM netflix
-WHERE type = 'Movie'
-ORDER BY SPLIT_PART(duration, ' ', 1)::INT DESC;
+FROM netflix WHERE type = 'Movie'ORDER BY SPLIT_PART(duration, ' ', 1)::INT DESC;
 ```
 
 **Objective:** Find the movie with the longest duration.
@@ -81,9 +79,7 @@ ORDER BY SPLIT_PART(duration, ' ', 1)::INT DESC;
 ### 6. Find Content Added in the Last 5 Years
 
 ```sql
-SELECT *
-FROM netflix
-WHERE TO_DATE(date_added, 'Month DD, YYYY') >= CURRENT_DATE - INTERVAL '5 years';
+SELECT *FROM netflix WHERE TO_DATE(date_added, 'Month DD, YYYY') >= CURRENT_DATE - INTERVAL '5 years';
 ```
 
 **Objective:** Retrieve content added to Netflix in the last 5 years.
