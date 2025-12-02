@@ -12,21 +12,21 @@ This README outlines the project goals, problem statements, analytical approach,
 The data for this project is sourced from kaggle dataset
 ## Dataset link [Netflix Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows)
 ## Shema
- DROP TABLE IF EXISTS netflix;
-CREATE TABLE netflix
-(
-    show_id      VARCHAR(5),
-    type         VARCHAR(10),
-    title        VARCHAR(250),
-    director     VARCHAR(550),
-    casts        VARCHAR(1050),
-    country      VARCHAR(550),
-    date_added   VARCHAR(55),
-    release_year INT,
-    rating       VARCHAR(15),
-    duration     VARCHAR(15),
-    listed_in    VARCHAR(250),
-    description  VARCHAR(550)
-);
+1. DROP TABLE IF EXISTS netflix;
+2. CREATE TABLE netflix
+3.(
+4  show_id      VARCHAR(5),
+5  type         VARCHAR(10),
+6  title        VARCHAR(250),
+7  director     VARCHAR(550),
+8  casts        VARCHAR(1050),
+10 country      VARCHAR(550),
+11 date_added   VARCHAR(55),
+12 release_year INT,
+13 rating       VARCHAR(15),
+14 duration     VARCHAR(15),
+15 listed_in    VARCHAR(250),
+16 description  VARCHAR(550)
+17 );
 
 
