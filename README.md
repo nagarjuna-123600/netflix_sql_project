@@ -45,9 +45,7 @@ select type,count(*) as total_countent from netflix1 group by type;
 ### 2. Find the Most Common Rating for Movies and TV Shows
 
 ```sql
-select type,rating from(
-select type,rating,count(*) ,rank() over (partition by type order by count(*) desc) as ranking from netflix1 group by type,rating) as t1
-WHERE rank = 1;
+select type,rating from(select type,rating,count(*) ,rank() over (partition by type order by count(*) desc) as ranking from netflix1 group by type,rating) as t1 WHERE rank = 1;
 ```
 
 **Objective:** Identify the most frequently occurring rating for each type of content.
