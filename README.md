@@ -13,7 +13,7 @@ The data for this project is sourced from kaggle dataset
 ## Dataset link [Netflix Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows)
 ## schema
 ## 🗄️ SQL Table Script
-The SQL schema for creating the Netflix dataset table can be found here:  
-[View netflix_table.sql](https://github.com/your-username/your-repo-name/blob/main/netflix_table.sql)
+netflix_table.sql
+
 
 
