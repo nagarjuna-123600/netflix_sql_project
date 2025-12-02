@@ -69,9 +69,7 @@ SELECT * FROM( SELECT UNNEST(STRING_TO_ARRAY(country, ',')) AS country,COUNT(*) 
 ### 5. Identify the Longest Movie
 
 ```sql
-SELECT 
-    *
-FROM netflix WHERE type = 'Movie'ORDER BY SPLIT_PART(duration, ' ', 1)::INT DESC;
+SELECT *FROM netflix WHERE type = 'Movie'ORDER BY SPLIT_PART(duration, ' ', 1)::INT DESC;
 ```
 
 **Objective:** Find the movie with the longest duration.
@@ -87,14 +85,7 @@ SELECT *FROM netflix WHERE TO_DATE(date_added, 'Month DD, YYYY') >= CURRENT_DATE
 ### 7. Find All Movies/TV Shows by Director 'Rajiv Chilaka'
 
 ```sql
-SELECT *
-FROM (
-    SELECT 
-        *,
-        UNNEST(STRING_TO_ARRAY(director, ',')) AS director_name
-    FROM netflix
-) AS t
-WHERE director_name = 'Rajiv Chilaka';
+SELECT *FROM (SELECT *,UNNEST(STRING_TO_ARRAY(director, ',')) AS director_name FROM netflix) AS t WHERE director_name = 'Rajiv Chilaka';
 ```
 
 **Objective:** List all content directed by 'Rajiv Chilaka'.
